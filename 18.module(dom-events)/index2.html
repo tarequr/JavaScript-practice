@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <style>
+        article{
+            border: 1px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .special{
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h3>Exploring DOM 2</h3>
+        <article>
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam corporis aliquam non assumenda natus quos adipisci delectus ipsum unde minima voluptates, debitis odio nobis accusamus facere porro placeat doloribus dignissimos.</p>
+        </article>
+        <article>
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Magni minima libero autem sed amet accusantium. Voluptatibus eaque deleniti modi cumque? Obcaecati perferendis nam repellendus aliquid dolore blanditiis voluptates cum quos, eius aliquam accusantium id laboriosam placeat nostrum doloremque!</p>
+        </article>
+        <article class="special">
+            <h3>article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Quis repellendus est quisquam perferendis tempore dolorum dicta repellat odio possimus autem consequuntur architecto doloribus, nemo quos? Atque nemo, suscipit pariatur nesciunt doloremque illo alias rem natus sint maxime et!</p>
+        </article>
+    </section> 
+
+    <script>
+        document.body.style.backgroundColor = '#ecead1'
+        //let authors = document.querySelectorAll('.special h3');
+        let authors = document.getElementsByClassName('author');
+
+        for (let i = 0; i < authors.length; i++) {
+            let element = authors[i];
+            //console.log(element);
+            //console.log(element.innerHTML);
+            element.innerHTML = "Sabbir-"+ (i+1);
+            element.setAttribute('title','All author is same')
+            element.style.backgroundColor = "lightblue";
+            element.style.margin = '15px';
+            element.style.padding = '5px';
+            
+        }
+    </script>
+</body>
+</html>

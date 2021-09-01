@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <style>
+        article{
+            border: 1px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .special{
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h3>Exploring DOM 2</h3>
+        <article id="first-artical">
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam corporis aliquam non assumenda natus quos adipisci delectus ipsum unde minima voluptates, debitis odio nobis accusamus facere porro placeat doloribus dignissimos.</p>
+        </article>
+        <article>
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Magni minima libero autem sed amet accusantium. Voluptatibus eaque deleniti modi cumque? Obcaecati perferendis nam repellendus aliquid dolore blanditiis voluptates cum quos, eius aliquam accusantium id laboriosam placeat nostrum doloremque!</p>
+        </article>
+        <article class="special">
+            <h3>article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Quis repellendus est quisquam perferendis tempore dolorum dicta repellat odio possimus autem consequuntur architecto doloribus, nemo quos? Atque nemo, suscipit pariatur nesciunt doloremque illo alias rem natus sint maxime et!</p>
+        </article>
+        <article>
+            <h3>Grocery List</h3>
+            <!-- ul>li{gift item -$}*3 -->
+            <ul id="gift-lists">
+                <li>gift item -1</li>
+                <li>gift item -2</li>
+                <li>gift item -3</li>
+                <li>gift item -4</li>
+                <li>gift item -5</li>
+            </ul>
+        </article>
+    </section> 
+
+    <script>
+        const article = document.getElementById("first-artical");
+        const newPragraph = document.createElement('p');
+
+        newPragraph.innerHTML = "Hello everyone. I'm Tarequr Rahman Sabbir. Here i added JS code";
+        article.appendChild(newPragraph);
+        newPragraph.style.backgroundColor = '#acf5ac';
+
+        //add one more gift item
+        const ul = document.getElementById("gift-lists");
+        const li = document.createElement('li');
+
+        li.innerHTML = "Brand New Gift";
+        ul.appendChild(li);
+    </script>
+</body>
+</html>
